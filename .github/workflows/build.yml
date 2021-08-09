@@ -28,7 +28,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-java-${{ matrix.java }}-${{ hashFiles('**/pom.xml') }}
+          key: ${{ runner.os }}-maven-java-${{ run.java }}-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
 
